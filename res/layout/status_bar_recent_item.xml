@@ -41,11 +41,19 @@
             android:background="@drawable/recents_thumbnail_bg"
             android:foreground="@drawable/recents_thumbnail_fg"
             android:visibility="invisible">
+            <!--
             <ImageView android:id="@+id/app_thumbnail_image"
                 android:layout_width="@dimen/status_bar_recents_thumbnail_width"
                 android:layout_height="@dimen/status_bar_recents_thumbnail_height"
             />        
-
+	    -->
+	    <ImageView android:id="@+id/app_thumbnail_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+            	android:adjustViewBounds="true"
+            /> 
+            
 	<TextView android:id="@+id/app_label"
             android:layout_width="@dimen/status_bar_recents_app_label_width"
             android:layout_height="wrap_content"
