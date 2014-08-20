@@ -597,14 +597,15 @@ public class RecentsPanelView extends FrameLayout implements OnItemClickListener
                (h.thumbnailViewDrawable.getIntrinsicWidth() != thumbnail.getIntrinsicWidth()) ||
                (h.thumbnailViewDrawable.getIntrinsicHeight() != thumbnail.getIntrinsicHeight())) {
                 if (mFitThumbnailToXY) {
-                    h.thumbnailViewImage.setScaleType(ImageView.ScaleType.MATRIX);
+                    //h.thumbnailViewImage.setScaleType(ImageView.ScaleType.MATRIX);
+                    h.thumbnailViewImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 } else {
                     Matrix scaleMatrix = new Matrix();
                     float scaleW = mThumbnailWidth / (float) thumbnail.getIntrinsicWidth();
 		    float scaleH = mThumbnailHeight / (float) thumbnail.getIntrinsicHeight();
                     scaleMatrix.setScale(scaleW, scaleH);
-                    h.thumbnailViewImage.setScaleType(ImageView.ScaleType.MATRIX);
-                    h.thumbnailViewImage.setImageMatrix(scaleMatrix);
+                    /*h.thumbnailViewImage.setScaleType(ImageView.ScaleType.MATRIX);
+                    h.thumbnailViewImage.setImageMatrix(scaleMatrix);*/
                 }
             }
             if((show) && (h.thumbnailView.getVisibility() != (View.VISIBLE))) {
