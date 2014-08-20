@@ -392,12 +392,13 @@ public class RecentsPanelView extends FrameLayout implements OnItemClickListener
             int action = m.getActionMasked();
             int currX = (int) m.getX(1);
             int currY = (int) m.getY(1);
-
+	    thumb.notifyDataSetChanged(); 
             switch (action) {
                 case MotionEvent.ACTION_DOWN:
                 case MotionEvent.ACTION_POINTER_DOWN:
                     mDragPositionX = currX;
                     mDragPositionY = currY;
+                    thumb.notifyDataSetChanged(); 
                     break;
 
                 case MotionEvent.ACTION_UP:
